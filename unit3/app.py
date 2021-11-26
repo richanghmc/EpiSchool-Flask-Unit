@@ -11,12 +11,14 @@ def start():
     menu and was struck with the difficult decision of ordering a milk tea or a fruit tea.
     Which do you pick?"""
 
+    image = "https://www.joshuakennon.com/wp-content/uploads/2019/06/Making-Our-Way-through-the-Line-at-Omomo-Tea-in-Irvine-California.jpeg"
+
     choices = [
         ('milk_tea',"Milk Tea"),
         ('fruit_tea',"Fruit Tea")
     ]
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    return render_template('adventure.html', title=title, text=text, choices=choices, image=image)
 
 
 
@@ -28,12 +30,14 @@ def milk_tea():
     Do I want to be healthy today? Do I just want to splurge. Hmmmm, you haven't thought this hard 
     since the start of the pandemic."""
 
+    image = "https://www.honestfoodtalks.com/wp-content/uploads/2021/08/Okinawa-milk-tea-recipe-using-kokuto.jpeg"
+
     choices = [
         ('half_Sugar',"Half Sugar"),
         ('full_sugar',"Full Sugar")
     ]
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    return render_template('adventure.html', title=title, text=text, choices=choices, image=image)
 
 @app.route("/fruittea")
 def fruit_tea():
@@ -44,7 +48,9 @@ def fruit_tea():
 
     choices = []
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    image = "https://www.fodmapeveryday.com/wp-content/uploads/2020/07/Low-FODMAP-Iced-Green-tea-with-Passionfruit-in-a-clear-footed-glass-on-gray-surface-outdoors.jpg"
+
+    return render_template('adventure.html', title=title, text=text, choices=choices, image=image)
 
 
 
@@ -56,9 +62,11 @@ def full_sugar():
     You can feel your own blood sugar levels rise. Just this once you tell yourself. Next time you must exercise control.
     You take your drink and go home feeling bad."""
 
+    image = "https://cdn.diabetesselfmanagement.com/2021/05/dsm-sugar-facts-shutterstock-1564269901.jpg"
+
     choices = []
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    return render_template('adventure.html', title=title, text=text, choices=choices, image=image)
 
 @app.route("/halfsugar")
 def half_Sugar():
@@ -67,7 +75,9 @@ def half_Sugar():
     text = """ Got job on being healthy. The cashier smiles at you and hands you your drink.
     You feel content and go home.
     """
+
+    image = "https://michelleswordpressyay.files.wordpress.com/2012/06/img_2365-1.jpg"
     
     choices = []
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    return render_template('adventure.html', title=title, text=text, choices=choices, image = image)
